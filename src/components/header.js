@@ -4,9 +4,9 @@ import Toolbar from 'material-ui/Toolbar'
 import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
-import Input from 'material-ui/Input'
 import { connect } from 'react-redux'
-import {boundSearch} from '../reducers/search'
+import { boundSearch } from '../reducers/search'
+import SearchBar from './SearchBar'
 
 const styles = {
   flex: {
@@ -31,12 +31,10 @@ class Header extends React.Component {
             >
               CryptoBrowser
             </Typography>
-            <Input
-              placeholder="Search"
+            <SearchBar
+              callback={this.onSearch}
               value={this.props.search.searchString}
-              onChange={this.onSearch}
             />
-            {/* <Button>Browse</Button> */}
           </Toolbar>
         </AppBar>
       </header>

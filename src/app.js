@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './views/home'
+import Home from './views/Home'
 
-import Header from './components/header'
+import Header from './components/Header'
 
 import Reboot from 'material-ui/Reboot'
 

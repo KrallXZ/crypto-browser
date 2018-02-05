@@ -8,7 +8,7 @@ import { dispatch } from '../store'
 export default function(state = [], action) {
   switch (action.type) {
     case ITEMS_LOAD_SUCCESS:
-      return action.someData
+      return action.items
     case ITEMS_LOAD_FAILURE:
       return {errorMessage: action.message}
     default:
@@ -16,10 +16,10 @@ export default function(state = [], action) {
   }
 }
 
-export function itemsLoadSuccess(someData) {
+export function itemsLoadSuccess(items) {
   return {
     type: ITEMS_LOAD_SUCCESS,
-    someData
+    items
   }
 }
 
