@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders correctly 1`] = `
+<div
+  className="MuiInput-root-1 MuiInput-inkbar-3 MuiInput-underline-7"
+  onBlur={[Function]}
+  onFocus={[Function]}
+>
+  <input
+    aria-invalid={undefined}
+    aria-required={undefined}
+    autoComplete={undefined}
+    autoFocus={undefined}
+    className="MuiInput-input-10"
+    defaultValue={undefined}
+    disabled={undefined}
+    id={undefined}
+    name={undefined}
+    onChange={[Function]}
+    onKeyDown={undefined}
+    onKeyUp={undefined}
+    placeholder="Search"
+    readOnly={undefined}
+    required={undefined}
+    rows={undefined}
+    type="text"
+    value={undefined}
+  />
+</div>
+`;

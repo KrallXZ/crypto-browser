@@ -1,4 +1,4 @@
-import { itemsLoadSuccess, itemsLoadFailure, itemsLoadRequest } from '../items'
+import itemsReducer, { itemsLoadSuccess, itemsLoadFailure, itemsLoadRequest } from '../items'
 import {
   ITEMS_LOAD_SUCCESS,
   ITEMS_LOAD_FAILURE,
@@ -32,5 +32,24 @@ describe('Items actions', () => {
     }
 
     expect(itemsLoadFailure(message)).toEqual(expectedAction)
+  })
+})
+
+describe('Items reducer', () => {
+  it('Should return initial state', () => {
+    expect(itemsReducer(undefined, {})).toEqual([])
+  })
+
+  it(`Should handle ${ITEMS_LOAD_SUCCESS}`, () => {
+    const items = ['item1']
+    
+    expect(itemsReducer(undefined, itemsLoadSuccess(items))).toEqual(items)
+  })
+
+  it(`Should handle ${ITEMS_LOAD_FAILURE}`, () => {
+    const errorMessage = "something went wrong"
+    const expectedState = {errorMessage}
+    
+    expect(itemsReducer(undefined, itemsLoadFailure(errorMessage))).toEqual(expectedState)
   })
 })
